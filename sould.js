@@ -116,6 +116,7 @@ const deleteTask = (taskId) => {
     tasks = tasks.filter((task) => task.id !== taskId); // ✅ correct filter condition
 
     renderTasks();
+    updateTaskSummary();
   }
 };
 
@@ -133,6 +134,7 @@ const editTask = (taskId) => {
         }
         task.text = trimmed;
         renderTasks();
+        
     }
 };
 
